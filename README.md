@@ -17,7 +17,7 @@ WatchZone is a clean and elegant responsive web template for online watch stores
 
 ## 📸 Preview
 
-![WatchZone Preview](https://alpeshp22.github.io/preview.webp)
+![WatchZone Preview](https://alpeshp22.github.io/watchzone/preview.webp)
 
 ---
 

@@ -1,4 +1,12 @@
 $(function () {
+
+  $(window).on('load', function () {
+    // Fade out loader for smooth transition
+    $('#loader').fadeOut(500, function () {
+      $(this).addClass('hidden');
+    });
+  });
+
   const watches = [
     { name: "Classic Leather", price: "$199", img: "./images/watch1.svg", category: "classic" },
     { name: "Minimal Chrono", price: "$249", img: "./images/watch2.svg", category: "minimal" },
