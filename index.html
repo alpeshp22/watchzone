@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>WatchZone - Online Watch Store</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Buy luxury, smart, and classic watches online at WatchZone. Best deals with fast delivery.">
+  <link rel="icon" href="images/logo-icon-dark.svg" media="(prefers-color-scheme: light)">
+  <link rel="icon" href="images/logo-icon-light.svg" media="(prefers-color-scheme: dark)">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="bg-dark p-3">
+    <div class="container d-flex justify-content-between align-items-center">
+      <a href="index.html" class="navbar-brand">
+        WatchZ<span></span>ne
+      </a>
+      <form class="d-md-flex d-none" role="search" aria-label="Search Watches">
+        <label for="searchInput" class="visually-hidden">Search</label>
+        <input id="searchInput" class="form-control" type="search" placeholder="Search watches..." aria-label="Search">
+      </form>
+    </div>
+  </header>
+
+  <section class="hero">
+    <h1>Timeless Elegance, Modern Style</h1>
+  </section>
+
+  <!-- Main Content -->
+  <main class="container my-5">
+    <h2 id="featured-title" class="mb-5 fw-bold text-center">Featured Watches</h2>
+    <div class="row">
+      <!-- Filter Sidebar -->
+      <aside class="col-md-3 mb-4">
+        <h5 aria-level="3">Filter by Category</h5>
+        <ul class="list-group list-group-flush list-unstyled" id="filter-list">
+          <li>
+            <a href="javascript:void(0);" class="list-group-item filter-btn active" data-category="all"
+              role="button">All</a>
+          </li>
+          <li><a href="javascript:void(0);" class="list-group-item filter-btn" data-category="classic"
+              role="button">Classic</a></li>
+          <li>
+            <a href="javascript:void(0);" class="list-group-item filter-btn" data-category="minimal"
+              role="button">Minimal</a>
+          </li>
+          <li>
+            <a href="javascript:void(0);" class="list-group-item filter-btn" data-category="smart"
+              role="button">Smart</a>
+          </li>
+        </ul>
+      </aside>
+
+      <!-- Product List -->
+      <section class="col-md-9" aria-labelledby="featured-title">
+        <h5 aria-level="3">&nbsp;</h5>
+        <div class="row" id="product-list">
+          <!-- Products will be inserted here by jQuery -->
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="text-center p-4">
+    <p>&copy; 2025 WatchZone. All rights reserved.</p>
+  </footer>
+
+  <!-- Product Detail Modal -->
+  <div class="modal fade" id="productModal" tabindex="-1" aria-labelledby="productModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content border-0 shadow-lg">
+        <div class="modal-body p-0">
+          <div class="row g-0">
+            <div class="col-md-6">
+              <img data-src="" id="modalImage" class="img-fluid h-100 w-100 object-fit-cover rounded-start"
+                alt="Product Image">
+            </div>
+            <div class="col-md-6 p-4 d-flex flex-column justify-content-between">
+              <div>
+                <h4 id="productModalLabel" class="fw-bold mb-3">&nbsp;</h4>
+                <span id="modalPrice" class="badge text-bg-warning fs-5 px-3 py-2"></span>
+                <p class="mt-3 text-muted">Elegant design, premium quality. Discover the timeless craftsmanship of our
+                  watches.</p>
+              </div>
+              <div class="mt-4">
+                <button type="button" class="btn btn-dark w-100 mb-2">Add to Cart</button>
+                <button type="button" class="btn btn-outline-secondary w-100" data-bs-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/scripts.js"></script>
+</body>
+
+</html>
