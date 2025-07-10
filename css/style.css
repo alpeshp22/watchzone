@@ -3,14 +3,12 @@
     --bg-body: #f5f5f5;
     --rgb-black: 0, 0, 0;
     --rgb-white: 0, 0, 0;
-    --bs-body-font-family: 'Inter', sans-serif;
 }
 
 body {
     position: relative;
     width: 100%;
     min-height: 100dvh;
-    font-family: 'Inter', sans-serif;
     background-color: var(--bg-body);
     color: var(--color-primary);
     overflow-x: hidden;
@@ -262,15 +260,18 @@ li:last-child .list-group-item {
 
 .contact-section label {
     display: block;
+    font-weight: 400;
     margin-bottom: .25rem;
+}
+
+.contact-section form {
+    max-width: 768px;
+    margin: 0 auto;
 }
 
 .contact-section .form-control {
     font-size: 1.125rem;
     min-height: 3.125rem;
-    box-shadow: inset 2px 2px 10px rgba(var(--rgb-white), 0.1),
-        inset -2px -2px 10px rgba(var(--rgb-white), 0.1);
-    border: 0 !important
 }
 
 .contact-section textarea.form-control {
