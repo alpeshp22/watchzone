@@ -49,7 +49,8 @@
       </a>
       <form class="d-md-flex d-none" role="search" aria-label="Search Watches">
         <label for="searchInput" class="visually-hidden">Search</label>
-        <input id="searchInput" class="form-control" type="search" placeholder="Search..." aria-label="Search">
+        <input id="searchInput" class="form-control form-control-lg" type="search" placeholder="Search..."
+          aria-label="Search">
       </form>
     </div>
   </header>
@@ -89,31 +90,47 @@
       </div>
     </section>
 
-    <!-- Contact Form -->
-    <section class="contact-section mt-5 py-md-5">
+    <!-- Contact Form Section-->
+    <section class="contact-section pt-4 mt-md-5 py-md-5">
       <div class="container">
         <div class="bg-dark p-5 rounded-4">
-          <h2 class="mb-4 text-center text-white fw-bold">Contact Us</h2>
-          <form id="contactForm" class="needs-validation w-75 mx-auto" novalidate>
-            <div class="row g-3">
-              <div class="col-md-6">
-                <label for="name" class="form-label text-white">Full Name *</label>
-                <input type="text" class="form-control form-control-lg" id="name" name="name" required
-                  aria-required="true" placeholder="Enter eame">
-              </div>
-              <div class="col-md-6">
-                <label for="email" class="form-label text-white">Email *</label>
-                <input type="email" class="form-control form-control-lg" id="email" name="email" required
-                  aria-required="true" placeholder="Enter email">
-              </div>
-              <div class="col-12">
-                <label for="message" class="form-label text-white">Message *</label>
-                <textarea class="form-control form-control-lg" id="message" name="message" rows="5" required
-                  aria-required="true" placeholder="Enter message"></textarea>
-              </div>
-              <div class="col-12 text-center mt-4">
-                <button type="submit" class="btn btn-light btn-lg fw-bolder px-4">Submit</button>
-              </div>
+          <h2 class="text-center text-white fw-bold mb-5">Contact Us</h2>
+          <!-- ✅ Contact Form -->
+          <form id="contactForm" action="https://formsubmit.co/alpesh@ninegravity.com" method="POST"
+            class="row g-3 needs-validation w-75 mx-auto" novalidate>
+
+            <!-- Honeypot to prevent spam -->
+            <input type="text" name="_honey" style="display:none">
+
+            <!-- Disable CAPTCHA -->
+            <input type="hidden" name="_captcha" value="false">
+
+            <!-- Redirect on success -->
+            <input type="hidden" name="_next" value="thank-you.html">
+
+            <div class="col-md-6">
+              <label for="name" class="form-label text-white">Name *</label>
+              <input type="text" name="name" id="name" class="form-control form-control-lg" required
+                aria-required="true" placeholder="Enter full name">
+              <div class="invalid-feedback">Please enter your name.</div>
+            </div>
+
+            <div class="col-md-6">
+              <label for="email" class="form-label text-white">Email *</label>
+              <input type="email" name="email" id="email" class="form-control form-control-lg" required
+                aria-required="true" placeholder="Enter email">
+              <div class="invalid-feedback">Please enter a valid email address.</div>
+            </div>
+
+            <div class="col-12">
+              <label for="message" class="form-label text-white">Message *</label>
+              <textarea name="message" id="message" rows="5" class="form-control form-control-lg" required
+                aria-required="true" placeholder="Enter your message"></textarea>
+              <div class="invalid-feedback">Please enter your message.</div>
+            </div>
+
+            <div class="col-12 text-center mt-3">
+              <button type="submit" class="btn btn-light btn-lg px-4">Send Message</button>
             </div>
           </form>
         </div>
