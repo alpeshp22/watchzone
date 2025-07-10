@@ -80,6 +80,7 @@ jQuery(function () {
     }
   });
 
+
   $(document).on('click', '.view-details', function () {
     const index = $(this).data('index');
     const watch = watches[index];
@@ -88,6 +89,23 @@ jQuery(function () {
     $('#modalPrice').text(watch.price);
     const modal = new bootstrap.Modal(document.getElementById('productModal'));
     modal.show();
+  });
+
+  // CONTACT FORM 
+  $('#contactForm').on('submit', function (e) {
+    e.preventDefault();
+    $.ajax({
+      url: './contact.php',
+      type: 'POST',
+      data: $(this).serialize(),
+      success: function (response) {
+        alert(response);
+        $('#contactForm')[0].reset();
+      },
+      error: function (xhr) {
+        alert(xhr.responseText || 'An error occurred. Please try again.');
+      }
+    });
   });
 
 

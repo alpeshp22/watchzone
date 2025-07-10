@@ -17,15 +17,16 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
   <!-- Preload Google Font -->
-  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap">
+  <link rel="preload" as="style" href="css/inter-font.css">
+  <link rel="stylesheet" href="css/inter-font.css">
 
   <!-- Bootstrap CSS -->
-  <link rel="preload" as="style" href="https://ajax.googleapis.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css">
+  <link rel="preload" as="style" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
 
   <!-- Custom CSS -->
-  <link href="css/style.css" rel="stylesheet">
+  <link rel="preload" as="style" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css">
 
 </head>
 
@@ -81,11 +82,45 @@
 
     <!-- Product List -->
     <section aria-labelledby="featured-title">
-      <div class="row product-list" id="product-list">
-        <!-- Products will be inserted here by jQuery -->
+      <div class="container">
+        <div class="row product-list" id="product-list">
+          <!-- Products will be inserted here by jQuery -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section class="contact-section mt-5 py-md-5">
+      <div class="container">
+        <div class="bg-dark p-5 rounded-4">
+          <h2 class="mb-4 text-center text-white fw-bold">Contact Us</h2>
+          <form id="contactForm" method="POST" action="contact.php" class="needs-validation w-75 mx-auto" novalidate>
+            <div class="row g-3">
+              <div class="col-md-6">
+                <label for="name" class="form-label text-white">Full Name *</label>
+                <input type="text" class="form-control form-control-lg" id="name" name="name" required
+                  aria-required="true" placeholder="Enter eame">
+              </div>
+              <div class="col-md-6">
+                <label for="email" class="form-label text-white">Email *</label>
+                <input type="email" class="form-control form-control-lg" id="email" name="email" required
+                  aria-required="true" placeholder="Enter email">
+              </div>
+              <div class="col-12">
+                <label for="message" class="form-label text-white">Message *</label>
+                <textarea class="form-control form-control-lg" id="message" name="message" rows="5" required
+                  aria-required="true" placeholder="Enter message"></textarea>
+              </div>
+              <div class="col-12 text-center mt-4">
+                <button type="submit" class="btn btn-light btn-lg fw-bolder px-4">Submit</button>
+              </div>
+            </div>
+          </form>
+        </div>
       </div>
     </section>
   </main>
+
 
   <!-- Footer -->
   <footer class="text-center p-4">
@@ -121,8 +156,8 @@
   </div>
 
   <!-- Scripts -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js" defer></script>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.bundle.min.js" defer></script>
   <script src="js/scripts.js"></script>
 
 </body>
