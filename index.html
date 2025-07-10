@@ -54,16 +54,15 @@
     </div>
   </header>
 
-  <!-- Main Content -->
-  <main id="site-main">
-    <!-- Hero Section -->
-    <section class="hero">
-      <h1>Timeless Elegance, Modern Style</h1>
-      <img src="images/hero-bg.webp" class="hero-img" fetchpriority="high" width="1920" height="400"
-        alt="Timeless Elegance">
-    </section>
+  <section class="hero">
+    <h1>Timeless Elegance, Modern Style</h1>
+    <img src="images/hero-bg.webp" class="hero-img" fetchpriority="high" width="1920" height="400"
+      alt="Timeless Elegance">
+  </section>
 
-    <!-- Product List Section-->
+  <!-- Main Content -->
+  <main class="my-md-5 my-4">
+    <!-- Product List -->
     <section aria-labelledby="featured-title">
       <div class="container">
         <h2 id="featured-title" class="mb-md-5 mb-4 fw-bold text-center">Featured Watches</h2>
@@ -92,48 +91,50 @@
     </section>
 
     <!-- Contact Form Section-->
-    <section class="contact-section">
+    <section class="contact-section pt-4 mt-md-5 py-md-5">
       <div class="container">
-        <div class="bg-dark">
-          <h2>Contact Us</h2>
-          <!-- ✅ Contact Form -->
-          <form id="contactForm" action="https://formsubmit.co/alpesh@ninegravity.com" method="POST"
-            class="row g-3 needs-validation" novalidate>
+        <h2 class="text-center fw-bold mb-sm-5 mb-4">Contact Us</h2>
+        <div class="row">
+          <div class="col-lg-10 mx-auto">
+            <!-- ✅ Contact Form -->
+            <form id="contactForm" action="https://formsubmit.co/alpesh@ninegravity.com" method="POST"
+              class="row g-3 needs-validation w-75 mx-auto" novalidate>
 
-            <!-- Honeypot to prevent spam -->
-            <input type="text" name="_honey" style="display:none">
+              <!-- Honeypot to prevent spam -->
+              <input type="text" name="_honey" style="display:none">
 
-            <!-- Disable CAPTCHA -->
-            <input type="hidden" name="_captcha" value="false">
+              <!-- Disable CAPTCHA -->
+              <input type="hidden" name="_captcha" value="false">
 
-            <!-- Redirect on success -->
-            <input type="hidden" name="_next" value="https://alpeshp22.github.io/watchzone/thank-you.html">
+              <!-- Redirect on success -->
+              <input type="hidden" name="_next" value="https://alpeshp22.github.io/watchzone/thank-you.html">
 
-            <div class="col-md-6">
-              <label for="name">Name *</label>
-              <input type="text" name="name" id="name" class="form-control form-control-lg" required
-                aria-required="true" placeholder="Enter full name">
-              <div class="invalid-feedback">Please enter your name.</div>
-            </div>
+              <div class="col-md-6">
+                <label for="name" class="form-label">Name *</label>
+                <input type="text" name="name" id="name" class="form-control form-control-lg border-dark" required
+                  aria-required="true" placeholder="Enter full name">
+                <div class="invalid-feedback">Please enter your name.</div>
+              </div>
 
-            <div class="col-md-6">
-              <label for="email">Email *</label>
-              <input type="email" name="email" id="email" class="form-control form-control-lg" required
-                aria-required="true" placeholder="Enter email">
-              <div class="invalid-feedback">Please enter a valid email address.</div>
-            </div>
+              <div class="col-md-6">
+                <label for="email" class="form-label">Email *</label>
+                <input type="email" name="email" id="email" class="form-control form-control-lg border-dark" required
+                  aria-required="true" placeholder="Enter email">
+                <div class="invalid-feedback">Please enter a valid email address.</div>
+              </div>
 
-            <div class="col-12">
-              <label for="message">Message *</label>
-              <textarea name="message" id="message" class="form-control form-control-lg" required aria-required="true"
-                placeholder="Enter your message"></textarea>
-              <div class="invalid-feedback">Please enter your message.</div>
-            </div>
+              <div class="col-12">
+                <label for="message" class="form-label">Message *</label>
+                <textarea name="message" id="message" rows="5" class="form-control form-control-lg border-dark" required
+                  aria-required="true" placeholder="Enter your message"></textarea>
+                <div class="invalid-feedback">Please enter your message.</div>
+              </div>
 
-            <div class="col-12 text-center mt-5">
-              <button type="submit" class="btn btn-light btn-lg px-4">Send Message</button>
-            </div>
-          </form>
+              <div class="col-12 text-center mt-5">
+                <button type="submit" class="btn btn-dark btn-lg px-4">Send Message</button>
+              </div>
+            </form>
+          </div>
         </div>
       </div>
     </section>

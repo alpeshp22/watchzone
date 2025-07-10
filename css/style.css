@@ -260,37 +260,17 @@ li:last-child .list-group-item {
     transform: scale(1.01);
 }
 
-.contact-section {
-    padding-top: 5rem;
-    padding-bottom: 3rem;
-}
-
-.contact-section h2 {
-    color: var(--bs-white);
-    text-align: center;
-    margin-bottom: 2rem;
-    font-weight: 700;
-}
-
-.contact-section .bg-dark {
-    padding: 4rem 1.25rem;
-    border-radius: 1rem;
-}
-
 .contact-section label {
     display: block;
     margin-bottom: .25rem;
-    color: var(--bs-white);
-}
-
-.contact-section form {
-    max-width: 768px;
-    margin: 0 auto;
 }
 
 .contact-section .form-control {
     font-size: 1.125rem;
     min-height: 3.125rem;
+    box-shadow: inset 2px 2px 10px rgba(var(--rgb-white), 0.1),
+        inset -2px -2px 10px rgba(var(--rgb-white), 0.1);
+    border: 0 !important
 }
 
 .contact-section textarea.form-control {
