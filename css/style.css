@@ -153,8 +153,6 @@ header .form-control::placeholder {
 
 .hero {
     --bs-gutter-x: 1.5rem;
-    background: url('../images/hero-bg.webp') no-repeat center center;
-    background-size: cover;
     height: 400px;
     position: relative;
     display: flex;
@@ -163,6 +161,16 @@ header .form-control::placeholder {
     color: var(--bs-white);
     text-align: center;
     padding: 0 calc(var(--bs-gutter-x) * .5);
+    overflow: hidden;
+}
+
+.hero .hero-img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
 }
 
 .hero h1 {
