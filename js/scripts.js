@@ -8,12 +8,12 @@ jQuery(function () {
   });
 
   const watches = [
-    { name: "Classic Leather", price: "$199", img: "./images/watch1.svg", category: "classic" },
-    { name: "Minimal Chrono", price: "$249", img: "./images/watch2.svg", category: "minimal" },
-    { name: "Smart Timepiece", price: "$299", img: "./images/watch3.svg", category: "smart" },
-    { name: "Minimal Chrono", price: "$199", img: "./images/watch4.svg", category: "minimal" },
-    { name: "Classic Leather", price: "$249", img: "./images/watch5.svg", category: "classic" },
-    { name: "Timepiece", price: "$299", img: "./images/watch6.svg", category: "classic" }
+    { name: "Classic Leather", price: "$199", img: "./images/watch1.webp", category: "classic" },
+    { name: "Minimal Chrono", price: "$249", img: "./images/watch2.webp", category: "minimal" },
+    { name: "Smart Timepiece", price: "$299", img: "./images/watch3.webp", category: "smart" },
+    { name: "Minimal Chrono", price: "$199", img: "./images/watch4.webp", category: "minimal" },
+    { name: "Classic Leather", price: "$249", img: "./images/watch5.webp", category: "classic" },
+    { name: "Timepiece", price: "$299", img: "./images/watch6.webp", category: "classic" }
   ];
 
   function renderProducts(category = 'all', keyword = '') {
