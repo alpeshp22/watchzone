@@ -7,24 +7,39 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description"
     content="Buy luxury, smart, and classic watches online at WatchZone. Best deals with fast delivery.">
+  <meta name="author" content="Alpesh Parmar" />
+  <meta name="robots" content="noindex,nofollow" />
   <link rel="icon" href="images/logo-icon-dark.svg" media="(prefers-color-scheme: light)">
   <link rel="icon" href="images/logo-icon-light.svg" media="(prefers-color-scheme: dark)">
 
   <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" media="print"
-    onload="this.media='all'; this.onload=null;">
+  <link href="https://ajax.googleapis.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet">
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" media="print"
-    onload="this.media='all'; this.onload=null;">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <!-- Custom CSS -->
-  <link href="css/style.css" rel="stylesheet" media="print" onload="this.media='all'; this.onload=null;">
+  <link href="css/style.css" rel="stylesheet">
+
+  <!-- Google Tag Manager -->
+  <script>(function (w, d, s, l, i) {
+      w[l] = w[l] || []; w[l].push({
+        'gtm.start':
+          new Date().getTime(), event: 'gtm.js'
+      }); var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-PFTJ63M7');</script>
+  <!-- End Google Tag Manager -->
 </head>
 
 <body>
   <!-- Accessible Loader -->
-  <div id="loader" role="alert" aria-live="assertive" aria-busy="true">
-    <div class="spinner" aria-hidden="true"></div>
-    <span class="visually-hidden">Loading content, please wait...</span>
+  <div id="clock-loader" role="alert" aria-live="assertive" aria-label="Page is loading, please wait">
+    <div class="clock" aria-hidden="true">
+      <div class="hand hour"></div>
+      <div class="hand minute"></div>
+      <div class="hand second"></div>
+    </div>
+    <span class="visually-hidden">Loading, please wait...</span>
   </div>
 
   <!-- Header -->
@@ -45,38 +60,31 @@
   </section>
 
   <!-- Main Content -->
-  <main class="container my-5">
-    <h2 id="featured-title" class="mb-5 fw-bold text-center">Featured Watches</h2>
-    <div class="row">
-      <!-- Filter Sidebar -->
-      <aside class="col-md-3 mb-4">
-        <h5 aria-level="3">Filter by Category</h5>
-        <ul class="list-group list-group-flush list-unstyled" id="filter-list">
-          <li>
-            <a href="javascript:void(0);" class="list-group-item filter-btn active" data-category="all"
-              role="button">All</a>
-          </li>
-          <li><a href="javascript:void(0);" class="list-group-item filter-btn" data-category="classic"
-              role="button">Classic</a></li>
-          <li>
-            <a href="javascript:void(0);" class="list-group-item filter-btn" data-category="minimal"
-              role="button">Minimal</a>
-          </li>
-          <li>
-            <a href="javascript:void(0);" class="list-group-item filter-btn" data-category="smart"
-              role="button">Smart</a>
-          </li>
-        </ul>
-      </aside>
+  <main class="container my-md-5 my-4">
+    <h2 id="featured-title" class="mb-md-5 mb-4 fw-bold text-center">Featured Watches</h2>
+    <ul class="list-group list-group-horizontal list-unstyled justify-content-center mt-md-5 mt-4 mb-4"
+      id="filter-list">
+      <li>
+        <a href="javascript:void(0);" class="list-group-item filter-btn active" data-category="all"
+          role="button">All</a>
+      </li>
+      <li><a href="javascript:void(0);" class="list-group-item filter-btn" data-category="classic"
+          role="button">Classic</a></li>
+      <li>
+        <a href="javascript:void(0);" class="list-group-item filter-btn" data-category="minimal"
+          role="button">Minimal</a>
+      </li>
+      <li>
+        <a href="javascript:void(0);" class="list-group-item filter-btn" data-category="smart" role="button">Smart</a>
+      </li>
+    </ul>
 
-      <!-- Product List -->
-      <section class="col-md-9" aria-labelledby="featured-title">
-        <h5 aria-level="3">&nbsp;</h5>
-        <div class="row" id="product-list">
-          <!-- Products will be inserted here by jQuery -->
-        </div>
-      </section>
-    </div>
+    <!-- Product List -->
+    <section aria-labelledby="featured-title">
+      <div class="row product-list" id="product-list">
+        <!-- Products will be inserted here by jQuery -->
+      </div>
+    </section>
   </main>
 
   <!-- Footer -->
@@ -88,7 +96,7 @@
   <div class="modal fade" id="productModal" tabindex="-1" aria-labelledby="productModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg modal-dialog-centered">
       <div class="modal-content border-0 shadow-lg">
-        <div class="modal-body p-0">
+        <div class="modal-body p-0 border-0">
           <div class="row g-0">
             <div class="col-md-6">
               <img data-src="" id="modalImage" class="img-fluid h-100 w-100 object-fit-cover rounded-start"
@@ -113,9 +121,10 @@
   </div>
 
   <!-- Scripts -->
-  <script src="https://code.jquery.com/jquery-3.7.1.min.js" defer></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
-  <script src="js/scripts.js" defer></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js" defer="true"></script>
+  <script src="js/scripts.js" defer="true"></script>
+
 </body>
 
 </html>

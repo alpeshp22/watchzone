@@ -6,45 +6,96 @@
 }
 
 body {
+    position: relative;
+    width: 100%;
+    min-height: 100dvh;
     font-family: 'Inter', sans-serif;
     background-color: var(--bg-body);
     color: var(--color-primary);
+    overflow-x: hidden;
+}
+
+.bg-dark .form-control:focus {
+    box-shadow: 0 0 0 .25rem rgba(255, 255, 255, .25);
 }
 
 /* Loader Styles */
-#loader {
+#clock-loader {
     position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100dvh;
+    background: #fff;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.clock {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    background: #fff;
+    border-radius: 50%;
+}
+
+.clock::before {
+    content: "";
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: #ffffff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 9999;
+    border: 8px dashed #333;
+    border-radius: 50%;
+    transform: rotate(20deg);
 }
 
-.spinner {
-    width: 60px;
-    height: 60px;
-    background-image: url('../images/logo-icon-dark.svg');
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-    animation: spin 1s linear infinite;
+.clock .hand {
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    transform-origin: bottom center;
+    background: #333;
+    border-radius: 4px;
 }
 
-@keyframes spin {
+.clock .hour {
+    width: 4px;
+    height: 25%;
+    transform: rotate(-60deg);
+    background: #555555;
+}
+
+.clock .minute {
+    width: 3px;
+    height: 35%;
+    transform: rotate(58deg);
+    background: #787878;
+}
+
+.clock .second {
+    width: 2px;
+    height: 38%;
+    background: #ff0000;
+    animation: tick 3s linear infinite;
+}
+
+@keyframes tick {
+    from {
+        transform: rotate(0deg);
+    }
+
     to {
         transform: rotate(360deg);
     }
 }
 
-/* Hide loader after fade out */
-#loader.hidden {
-    display: none;
-}
+/* End Loader Style */
+
 
 header {
     background: linear-gradient(90deg, #000, #222);
@@ -169,8 +220,42 @@ footer p {
     left: 1rem;
 }
 
+.product-list {
+    --bs-gutter-y: 1.5rem;
+}
+
+li:first-child .list-group-item {
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+}
+
+li:last-child .list-group-item {
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+
+#modalImage {
+    transform: scale(1.01);
+}
+
 @media (max-width:768px) {
+    .container {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+
     header .container {
         justify-content: center !important;
     }
 }
+
+/* End 768px */
+
+@media (max-width:420px) {
+    .col-6 {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+/* End 420px */
