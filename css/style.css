@@ -3,6 +3,7 @@
     --bg-body: #f5f5f5;
     --rgb-black: 0, 0, 0;
     --rgb-white: 0, 0, 0;
+    --bs-body-font-family: 'Inter', sans-serif;
 }
 
 body {
@@ -95,6 +96,13 @@ body {
 
 /* End Loader Style */
 
+section+section {
+    padding-top: 5rem;
+}
+
+section:last-child {
+    margin-bottom: 5rem;
+}
 
 header {
     background: linear-gradient(90deg, #000, #222);
@@ -226,6 +234,10 @@ footer p {
     left: 1rem;
 }
 
+.btn {
+    font-weight: 500;
+}
+
 main.container {
     min-height: 400px;
 }
@@ -259,6 +271,7 @@ li:last-child .list-group-item {
 }
 
 .contact-section label {
+    color: var(--bs-white);
     display: block;
     font-weight: 400;
     margin-bottom: .25rem;

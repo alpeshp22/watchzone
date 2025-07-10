@@ -45,14 +45,14 @@
     </div>
   </header>
 
-  <section class="hero">
-    <h1>Timeless Elegance, Modern Style</h1>
-    <img src="images/hero-bg.webp" class="hero-img" fetchpriority="high" width="1920" height="400"
-      alt="Timeless Elegance">
-  </section>
-
   <!-- Main Content -->
-  <main class="my-md-5 my-4">
+  <main id="site-main">
+    <section class="hero">
+      <h1>Timeless Elegance, Modern Style</h1>
+      <img src="images/hero-bg.webp" class="hero-img" fetchpriority="high" width="1920" height="400"
+        alt="Timeless Elegance">
+    </section>
+
     <!-- Product List -->
     <section aria-labelledby="featured-title">
       <div class="container">
@@ -82,7 +82,7 @@
     </section>
 
     <!-- Contact Form Section-->
-    <section class="contact-section pt-4 mt-md-5 py-md-5">
+    <section class="contact-section">
       <div class="container">
         <div class="bg-dark py-5 px-sm-5 px-3 rounded-4">
           <h2 class="text-center text-white fw-bold mb-sm-5 mb-4">Contact Us</h2>
@@ -100,28 +100,28 @@
             <input type="hidden" name="_next" value="https://alpeshp22.github.io/watchzone/thank-you.html">
 
             <div class="col-md-6">
-              <label for="name" class="form-label text-white">Name *</label>
+              <label for="name">Name *</label>
               <input type="text" name="name" id="name" class="form-control form-control-lg" required
                 aria-required="true" placeholder="Enter full name">
               <div class="invalid-feedback">Please enter your name.</div>
             </div>
 
             <div class="col-md-6">
-              <label for="email" class="form-label text-white">Email *</label>
+              <label for="email">Email *</label>
               <input type="email" name="email" id="email" class="form-control form-control-lg" required
                 aria-required="true" placeholder="Enter email">
               <div class="invalid-feedback">Please enter a valid email address.</div>
             </div>
 
             <div class="col-12">
-              <label for="message" class="form-label text-white">Message *</label>
+              <label for="message">Message *</label>
               <textarea name="message" id="message" rows="5" class="form-control form-control-lg" required
                 aria-required="true" placeholder="Enter your message"></textarea>
               <div class="invalid-feedback">Please enter your message.</div>
             </div>
 
             <div class="col-12 text-center mt-5">
-              <button type="submit" class="btn btn-light btn-lg fw-bolder px-4">Send Message</button>
+              <button type="submit" class="btn btn-light btn-lg fw-bolder px-4">Submit</button>
             </div>
           </form>
         </div>
