@@ -49,21 +49,21 @@
       </a>
       <form class="d-md-flex d-none" role="search" aria-label="Search Watches">
         <label for="searchInput" class="visually-hidden">Search</label>
-        <input id="searchInput" class="form-control form-control-lg" type="search" placeholder="Search..."
-          aria-label="Search">
+        <input id="searchInput" class="form-control" type="search" placeholder="Search..." aria-label="Search">
       </form>
     </div>
   </header>
 
-  <section class="hero">
-    <h1>Timeless Elegance, Modern Style</h1>
-    <img src="images/hero-bg.webp" class="hero-img" fetchpriority="high" width="1920" height="400"
-      alt="Timeless Elegance">
-  </section>
-
   <!-- Main Content -->
-  <main class="my-md-5 my-4">
-    <!-- Product List -->
+  <main id="site-main">
+    <!-- Hero Section -->
+    <section class="hero">
+      <h1>Timeless Elegance, Modern Style</h1>
+      <img src="images/hero-bg.webp" class="hero-img" fetchpriority="high" width="1920" height="400"
+        alt="Timeless Elegance">
+    </section>
+
+    <!-- Product List Section-->
     <section aria-labelledby="featured-title">
       <div class="container">
         <h2 id="featured-title" class="mb-md-5 mb-4 fw-bold text-center">Featured Watches</h2>
@@ -92,13 +92,13 @@
     </section>
 
     <!-- Contact Form Section-->
-    <section class="contact-section pt-4 mt-md-5 py-md-5">
+    <section class="contact-section">
       <div class="container">
-        <div class="bg-dark py-5 px-sm-5 px-3 rounded-4">
-          <h2 class="text-center text-white fw-bold mb-sm-5 mb-4">Contact Us</h2>
+        <div class="bg-dark">
+          <h2>Contact Us</h2>
           <!-- ✅ Contact Form -->
           <form id="contactForm" action="https://formsubmit.co/alpesh@ninegravity.com" method="POST"
-            class="row g-3 needs-validation w-75 mx-auto" novalidate>
+            class="row g-3 needs-validation" novalidate>
 
             <!-- Honeypot to prevent spam -->
             <input type="text" name="_honey" style="display:none">
@@ -110,21 +110,21 @@
             <input type="hidden" name="_next" value="https://alpeshp22.github.io/watchzone/thank-you.html">
 
             <div class="col-md-6">
-              <label for="name" class="form-label text-white">Name *</label>
+              <label for="name" class="form-label">Name *</label>
               <input type="text" name="name" id="name" class="form-control form-control-lg" required
                 aria-required="true" placeholder="Enter full name">
               <div class="invalid-feedback">Please enter your name.</div>
             </div>
 
             <div class="col-md-6">
-              <label for="email" class="form-label text-white">Email *</label>
+              <label for="email" class="form-label">Email *</label>
               <input type="email" name="email" id="email" class="form-control form-control-lg" required
                 aria-required="true" placeholder="Enter email">
               <div class="invalid-feedback">Please enter a valid email address.</div>
             </div>
 
             <div class="col-12">
-              <label for="message" class="form-label text-white">Message *</label>
+              <label for="message" class="form-label">Message *</label>
               <textarea name="message" id="message" rows="5" class="form-control form-control-lg" required
                 aria-required="true" placeholder="Enter your message"></textarea>
               <div class="invalid-feedback">Please enter your message.</div>
@@ -138,7 +138,6 @@
       </div>
     </section>
   </main>
-
 
   <!-- Footer -->
   <footer class="text-center p-4">

@@ -263,7 +263,34 @@ li:last-child .list-group-item {
 }
 
 .contact-section {
-    min-height: 600px;
+    padding-top: 5rem;
+    padding-bottom: 3rem;
+    min-height: 400px;
+}
+
+.contact-section h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-weight: 700;
+}
+
+.contact-section .bg-dark {
+    padding: 4rem 1.25rem;
+    border-radius: 1rem;
+}
+
+.contact-section h2,
+.contact-section label {
+    color: var(--bs-white);
+}
+
+.contact-section form {
+    max-width: 768px;
+    margin: 0 auto;
+}
+
+.contact-section .form-control {
+    font-size: 1.125rem;
 }
 
 .thank-you-wrapper {
