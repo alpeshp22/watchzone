@@ -11,11 +11,14 @@
   <link rel="icon" href="images/logo-icon-dark.svg" media="(prefers-color-scheme: light)">
   <link rel="icon" href="images/logo-icon-light.svg" media="(prefers-color-scheme: dark)">
 
+
+  <!-- Preconnect to Google Fonts early -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- Preload Google Font -->
   <link rel="preload" as="style" href="css/inter-font.css">
   <link rel="stylesheet" href="css/inter-font.css">
-
 
   <!-- Bootstrap CSS -->
   <link rel="preload" as="style" href="css/bootstrap.min.css">
@@ -52,7 +55,7 @@
   </header>
 
   <!-- Main Content -->
-  <main id="site-main">
+  <main>
     <section class="hero">
       <h1>Timeless Elegance, Modern Style</h1>
       <img src="images/hero-bg.webp" class="hero-img" fetchpriority="high" width="1920" height="400"
@@ -63,7 +66,7 @@
     <section aria-labelledby="featured-title">
       <div class="container">
         <h2 id="featured-title" class="mb-md-5 mb-4 fw-bold text-center">Featured Watches</h2>
-        <ul class="list-group list-group-horizontal list-unstyled justify-content-center mt-md-5 mt-4 mb-4"
+        <ul class="list-group list-group-horizontal list-unstyled justify-content-center mt-md-5 mt-4 mb-5"
           id="filter-list">
           <li>
             <a href="javascript:void(0);" class="list-group-item filter-btn active" data-category="all"
@@ -94,9 +97,9 @@
           <h2 class="text-center text-white fw-bold mb-sm-5 mb-4">Contact Us</h2>
           <!-- ✅ Contact Form -->
           <div class="row">
-            <div class="col-lg-10 mx-auto">
+            <div class="col-lg-8 mx-auto">
               <form id="contactForm" action="https://formsubmit.co/alpesh@ninegravity.com" method="POST"
-                class="row g-3 needs-validation w-75 mx-auto" novalidate>
+                class="row g-3 needs-validation" novalidate>
 
                 <!-- Honeypot to prevent spam -->
                 <input type="text" name="_honey" style="display:none">
@@ -108,28 +111,28 @@
                 <input type="hidden" name="_next" value="https://alpeshp22.github.io/watchzone/thank-you.html">
 
                 <div class="col-md-6">
-                  <label for="name">Name *</label>
+                  <label for="name" class="form-label text-white">Name *</label>
                   <input type="text" name="name" id="name" class="form-control form-control-lg" required
-                    aria-required="true" placeholder="Enter full name" autocomplete="off">
+                    aria-required="true" placeholder="Enter full name">
                   <div class="invalid-feedback">Please enter your name.</div>
                 </div>
 
                 <div class="col-md-6">
-                  <label for="email">Email *</label>
+                  <label for="email" class="form-label text-white">Email *</label>
                   <input type="email" name="email" id="email" class="form-control form-control-lg" required
-                    aria-required="true" placeholder="Enter email" autocomplete="off">
+                    aria-required="true" placeholder="Enter email">
                   <div class="invalid-feedback">Please enter a valid email address.</div>
                 </div>
 
                 <div class="col-12">
-                  <label for="message">Message *</label>
+                  <label for="message" class="form-label text-white">Message *</label>
                   <textarea name="message" id="message" rows="5" class="form-control form-control-lg" required
-                    aria-required="true" placeholder="Enter your message" autocomplete="off"></textarea>
+                    aria-required="true" placeholder="Enter your message"></textarea>
                   <div class="invalid-feedback">Please enter your message.</div>
                 </div>
 
                 <div class="col-12 text-center mt-5">
-                  <button type="submit" class="btn btn-light btn-lg fw-bolder px-4">Submit</button>
+                  <button type="submit" class="btn btn-light fw-bolder btn-lg px-4">Submit</button>
                 </div>
               </form>
             </div>
@@ -138,7 +141,6 @@
       </div>
     </section>
   </main>
-
 
   <!-- Footer -->
   <footer class="text-center p-4">
