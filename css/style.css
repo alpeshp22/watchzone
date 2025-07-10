@@ -3,6 +3,7 @@
     --bg-body: #f5f5f5;
     --rgb-black: 0, 0, 0;
     --rgb-white: 0, 0, 0;
+    --bs-body-font-family: 'Inter', sans-serif;
 }
 
 body {
@@ -269,16 +270,15 @@ li:last-child .list-group-item {
     transform: scale(1.01);
 }
 
+.contact-section {
+    min-height: 600px;
+}
+
 .contact-section label {
     color: var(--bs-white);
     display: block;
     font-weight: 400;
     margin-bottom: .25rem;
-}
-
-.contact-section form {
-    max-width: 768px;
-    margin: 0 auto;
 }
 
 .contact-section .form-control {

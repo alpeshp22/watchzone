@@ -11,6 +11,12 @@
   <link rel="icon" href="images/logo-icon-dark.svg" media="(prefers-color-scheme: light)">
   <link rel="icon" href="images/logo-icon-light.svg" media="(prefers-color-scheme: dark)">
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="css/inter-font.css">
+  <link rel="stylesheet" href="css/inter-font.css">
+
+
   <!-- Bootstrap CSS -->
   <link rel="preload" as="style" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -87,43 +93,47 @@
         <div class="bg-dark py-5 px-sm-5 px-3 rounded-4">
           <h2 class="text-center text-white fw-bold mb-sm-5 mb-4">Contact Us</h2>
           <!-- ✅ Contact Form -->
-          <form id="contactForm" action="https://formsubmit.co/alpesh@ninegravity.com" method="POST"
-            class="row g-3 needs-validation w-75 mx-auto" novalidate>
+          <div class="row">
+            <div class="col-lg-10 mx-auto">
+              <form id="contactForm" action="https://formsubmit.co/alpesh@ninegravity.com" method="POST"
+                class="row g-3 needs-validation w-75 mx-auto" novalidate>
 
-            <!-- Honeypot to prevent spam -->
-            <input type="text" name="_honey" style="display:none">
+                <!-- Honeypot to prevent spam -->
+                <input type="text" name="_honey" style="display:none">
 
-            <!-- Disable CAPTCHA -->
-            <input type="hidden" name="_captcha" value="false">
+                <!-- Disable CAPTCHA -->
+                <input type="hidden" name="_captcha" value="false">
 
-            <!-- Redirect on success -->
-            <input type="hidden" name="_next" value="https://alpeshp22.github.io/watchzone/thank-you.html">
+                <!-- Redirect on success -->
+                <input type="hidden" name="_next" value="https://alpeshp22.github.io/watchzone/thank-you.html">
 
-            <div class="col-md-6">
-              <label for="name">Name *</label>
-              <input type="text" name="name" id="name" class="form-control form-control-lg" required
-                aria-required="true" placeholder="Enter full name" autocomplete="off">
-              <div class="invalid-feedback">Please enter your name.</div>
+                <div class="col-md-6">
+                  <label for="name">Name *</label>
+                  <input type="text" name="name" id="name" class="form-control form-control-lg" required
+                    aria-required="true" placeholder="Enter full name" autocomplete="off">
+                  <div class="invalid-feedback">Please enter your name.</div>
+                </div>
+
+                <div class="col-md-6">
+                  <label for="email">Email *</label>
+                  <input type="email" name="email" id="email" class="form-control form-control-lg" required
+                    aria-required="true" placeholder="Enter email" autocomplete="off">
+                  <div class="invalid-feedback">Please enter a valid email address.</div>
+                </div>
+
+                <div class="col-12">
+                  <label for="message">Message *</label>
+                  <textarea name="message" id="message" rows="5" class="form-control form-control-lg" required
+                    aria-required="true" placeholder="Enter your message" autocomplete="off"></textarea>
+                  <div class="invalid-feedback">Please enter your message.</div>
+                </div>
+
+                <div class="col-12 text-center mt-5">
+                  <button type="submit" class="btn btn-light btn-lg fw-bolder px-4">Submit</button>
+                </div>
+              </form>
             </div>
-
-            <div class="col-md-6">
-              <label for="email">Email *</label>
-              <input type="email" name="email" id="email" class="form-control form-control-lg" required
-                aria-required="true" placeholder="Enter email" autocomplete="off">
-              <div class="invalid-feedback">Please enter a valid email address.</div>
-            </div>
-
-            <div class="col-12">
-              <label for="message">Message *</label>
-              <textarea name="message" id="message" rows="5" class="form-control form-control-lg" required
-                aria-required="true" placeholder="Enter your message" autocomplete="off"></textarea>
-              <div class="invalid-feedback">Please enter your message.</div>
-            </div>
-
-            <div class="col-12 text-center mt-5">
-              <button type="submit" class="btn btn-light btn-lg fw-bolder px-4">Submit</button>
-            </div>
-          </form>
+          </div>
         </div>
       </div>
     </section>
