@@ -220,8 +220,22 @@ footer p {
     left: 1rem;
 }
 
+main.container {
+    min-height: 400px;
+}
+
 .product-list {
     --bs-gutter-y: 1.5rem;
+}
+
+.product-list img {
+    aspect-ratio: 1 / 1;
+    height: auto;
+    object-fit: cover;
+}
+
+.product-list .card-body {
+    min-height: 100px;
 }
 
 li:first-child .list-group-item {

@@ -40,7 +40,7 @@ jQuery(function () {
       $('#product-list').append(`
         <div class="col-xl-4 col-md-4 col-6">
           <div class="card h-100">
-            <img src="${watch.img}" alt="${watch.name}" class="card-img-top object-fit-cover" width="100%" height="100%" loading="lazy" />
+            <img src="${watch.img}" alt="${watch.name}" class="card-img-top" width="416" height="416" loading="lazy" />
             <div class="card-body text-center">
               <h5 class="card-title" aria-level="3">${highlightedName}</h5>
               <p class="card-text badge text-bg-dark rounded-pill d-table mx-auto">${watch.price}</p>
