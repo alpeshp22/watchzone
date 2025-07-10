@@ -179,8 +179,6 @@ header .form-control::placeholder {
     font-weight: 700;
     background: rgba(var(--rgb-black), 0.6);
     padding: 1rem 2rem;
-    min-height: 100px;
-    max-width: 900px;
 }
 
 .card {
@@ -265,10 +263,10 @@ li:last-child .list-group-item {
 .contact-section {
     padding-top: 5rem;
     padding-bottom: 3rem;
-    min-height: 400px;
 }
 
 .contact-section h2 {
+    color: var(--bs-white);
     text-align: center;
     margin-bottom: 2rem;
     font-weight: 700;
@@ -279,8 +277,9 @@ li:last-child .list-group-item {
     border-radius: 1rem;
 }
 
-.contact-section h2,
 .contact-section label {
+    display: block;
+    margin-bottom: .25rem;
     color: var(--bs-white);
 }
 
@@ -291,6 +290,11 @@ li:last-child .list-group-item {
 
 .contact-section .form-control {
     font-size: 1.125rem;
+    min-height: 3.125rem;
+}
+
+.contact-section textarea.form-control {
+    min-height: calc(0.25rem * 25);
 }
 
 .thank-you-wrapper {
