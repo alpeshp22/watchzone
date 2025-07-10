@@ -179,6 +179,7 @@ header .form-control::placeholder {
     background: rgba(var(--rgb-black), 0.6);
     padding: 1rem 2rem;
     min-height: 100px;
+    max-width: 900px;
 }
 
 .card {
@@ -260,7 +261,7 @@ li:last-child .list-group-item {
     transform: scale(1.01);
 }
 
-#contactForm {
+.contact-section {
     min-height: 400px;
 }
 
@@ -319,6 +320,11 @@ li:last-child .list-group-item {
 }
 
 /* End 768px */
+@media (max-width:575px) {
+    .thank-you-box {
+        max-width: calc(100% - 40px);
+    }
+}
 
 @media (max-width:420px) {
     .col-6 {
